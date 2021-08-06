@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            font-weight: 500;
+            background-color: #79ceff;
+            background-image: linear-gradient(315deg, #79ceff 0%, #dcb5ff 67%, #ffb8f0 100%);
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: #425a65;
+        }
+
+        .form {
+            width: 24rem;
+            padding: 2rem;
+            border-radius: 1rem;
+            background-color: white;
+        }
+
+        .form__title {
+            margin-bottom: 0.5rem;
+        }
+
+
+        .form__description {
+            margin-bottom: 2rem;
+        }
+
+        .form__group {
+            position: relative;
+            height: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form__input {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #cfd8dc;
+            border-radius: 0.5rem;
+            font-family: inherit;
+            font-weight: inherit;
+            color: inherit;
+            outline: none;
+            padding: 1.25rem;
+            background: none;
+        }
+
+        .form__input:hover {
+            border-color: #9dedff;
+        }
+
+        .form__input:focus {
+            border-color: #7dbff6;
+        }
+
+        .form__label {
+            position: absolute;
+            left: 1rem;
+            top: 0.9rem;
+            padding: 0 0.5rem;
+            background-color: white;
+            transition:
+                top 200ms ease-in,
+                left 200ms ease-in,
+                font-size 200ms ease-in;
+        }
+
+        .form__button {
+            display: block;
+            margin-left: auto;
+            padding: 0.75rem 2rem;
+            background-color: #9dedff;
+            font-family: inherit;
+            font-weight: inherit;
+            border-radius: 0.5rem;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 200ms ease-in;
+        }
+
+        .form__button:hover {
+            background-color: #7bdff6;
+        }
+
+        .form__input:focus~.form__label,
+        .form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label {
+            top: -0.5rem;
+            left: 0.8rem;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="form">
+        <h1 class="form__title">Sign Up</h1>
+        <p class="form__description">Get unlimited access to the latest design trends</p>
+
+        <div class="form__group">
+            <input type="text" class="form__input" id="name" placeholder=" " autocomplete="off">
+            <label for="name" class="form__label">Username</label>
+        </div>
+
+        <div class="form__group">
+            <input type="email" id="email" class="form__input" placeholder=" " autocomplete="off">
+            <label for="email" class="form__label">Email</label>
+        </div>
+
+        <div class="form__group">
+            <input type="password" id="password" class="form__input" placeholder=" ">
+            <label for="password" class="form__label">Password</label>
+        </div>
+
+        <div class="form__group">
+            <input type="tel" class="form__input" id="mobileno" placeholder=" ">
+            <label for="mobileno" class="form__label">Mobile No</label>
+        </div>
+
+        <button class="form__button">Sign up</button>
+    </form>
+</body>
+
+</html>
