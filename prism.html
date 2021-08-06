@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="prism.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="prism" id="prism">
+            <div class="faces triangle" id="Front"><span>Front</span></div>
+            <div class="faces rectangle" id="Left">Left</div>
+            <div class="faces triangle" id="Back"><span>Back</span></div>
+            <div class="faces rectangle" id="Right">Right</div>
+            <div class="faces rectangle" id="Bottom">Bottom</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button" onclick="rotate(1)">Front</button>
+        <button class="button" onclick="rotate(2)">Left</button>
+        <button class="button" onclick="rotate(3)">Back</button>
+        <button class="button" onclick="rotate(4)">Right</button>
+        <button class="button" onclick="rotate(5)">Bottom</button>
+    </div>
+
+ 
+    
+    <script>
+
+        let btn =  document.getElementById("prism");
+        
+        function rotate(n)
+        {
+            if(n==1)
+            {                
+                    btn.style.cssText = "transform: rotateY(0deg);"
+            }
+            else if(n==2)
+            {
+                    btn.style.cssText = "transform: rotateY(90deg);"
+            }
+            else if(n==3)
+            {
+                    btn.style.cssText = "transform: rotateY(180deg);"
+            }
+            else if(n==4) 
+            {
+                    btn.style.cssText = "transform: rotateY(270deg);"
+            }
+            else
+            {
+                    btn.style.cssText = "transform: rotateX(90deg);"
+            }
+        
+        }
+    </script>
+
+</body>
+
+</html>

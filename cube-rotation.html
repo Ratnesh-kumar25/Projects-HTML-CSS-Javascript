@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cube-rotation.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube" id="cube">
+            <div class="face" id="Top">Top</div>
+            <div class="face" id="Bottom">Bottom</div>
+            <div class="face" id="Left">Left</div>
+            <div class="face" id="Right">Right</div>
+            <div class="face" id="Front">Front</div>
+            <div class="face" id="Back">Back</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button" id="btn-Front" onclick="rotate(1)">Front</button>
+        <button class="button" id="btn-Left" onclick="rotate(2)">Left</button>
+        <button class="button" id="btn-Back" onclick="rotate(3)">Back</button>
+        <button class="button" id="btn-Right" onclick="rotate(4)">Right</button>
+        <button class="button" id="btn-Top" onclick="rotate(5)">Top</button>
+        <button class="button" id="btn-Bottom" onclick="rotate(6)">Bottom</button>
+    </div>
+
+
+    <script>
+
+        let btn =  document.getElementById("cube");
+
+        function rotate(n)
+        {
+            if(n==1)
+            {
+                    btn.style.cssText = "transform: rotateY(0deg);"
+            }
+            else if(n==2)
+            {
+                    btn.style.cssText = "transform: rotateY(90deg);"
+            }
+            else if(n==3)
+            {
+                    btn.style.cssText = "transform: rotateY(180deg);"
+            }
+            else if(n==4) 
+            {
+                    btn.style.cssText = "transform: rotateY(270deg);"
+            }
+            else if(n==5)
+            {
+                    btn.style.cssText = "transform: rotateX(-90deg);"
+            }
+            else
+            {
+                    btn.style.cssText = "transform: rotateX(90deg);"
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

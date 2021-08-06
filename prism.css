@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Here display is used to  center the whole container */
+body{
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Here margin is used to give position to the container */
+.container{
+    margin: 12rem 0 0 35rem;
+    height: 300px;
+    width: 400px;
+    perspective: 10000px;
+}
+
+/* Here transition is used to give smoothness to the transition and position is used to change the position of the prism with respect to that position afterwards */
+.prism{
+    position: relative;
+    transition: 2s;
+    height: 300px;
+    width: 400px;
+    transform-style: preserve-3d;
+}
+
+.faces{
+    position: absolute;
+    text-align: center;
+    line-height: 15rem;
+    height: 300px;
+    width: 400px;
+    font-size: 35px;
+}
+
+/* Here the text inside span i.e fornt or back are not in centre position to place them to the centre it is used */
+span{
+    position:absolute;
+    left: -2rem;
+}
+
+/* Here the triangular shape is created using the border property */
+.triangle{
+    height: 0;
+    width: 0;
+    text-align: left;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+}
+
+.rectangle{
+    line-height: 13rem;
+    height: 200px;
+    width: 200px;
+}
+
+#Front{
+    border-bottom: 200px solid yellow;
+    transform: translateZ(100px) rotateY(0deg);
+    z-index: 5;
+}
+
+/* Here three properties are used:- skew ==> to tilt the rectangle , translate ==> for positioning and rotate ==> to rotate the rectangle*/
+#Left{
+    background-color: green;
+    transform: skewX(-45deg) translateX(0px) rotateY(-90deg);
+}
+
+#Back{
+    border-bottom: 200px solid red;
+    transform: translateZ(-100px) rotateY(-180deg);
+}
+
+#Right{
+    background-color: orange;
+    transform: skewX(45deg) translateX(200px) rotateY(90deg);
+}
+
+#Bottom{
+    width: 400px;
+    background-color: pink;
+    transform: translateY(100px) rotateX(270deg);
+}
+
+.buttons{
+    font-size: 6px;
+    font-weight: 200;
+    position: relative;
+    margin: 0 0 0 30rem;
+}
+
+.button{
+    padding: 0 1.5rem;
+    margin: 0 1rem;
+}
